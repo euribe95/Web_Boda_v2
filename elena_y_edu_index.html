@@ -17,20 +17,39 @@
             <p>Lugar: [Nombre del lugar]</p>
         </header>
 
-        <section class="formulario">
-            <h3>Confirma tu asistencia</h3>
-            <form id="confirmacionForm">
-                <input type="text" placeholder="Nombre completo" required>
-                <input type="email" placeholder="Correo o teléfono" required>
-                <select required>
-                    <option value="" disabled selected>¿Asistirás?</option>
-                    <option value="si">¡Sí, estaré allí!</option>
-                    <option value="no">Lo siento, no podré asistir</option>
-                </select>
-                <textarea placeholder="Mensaje o alergias (opcional)"></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
+<section class="formulario">
+    <h3>Confirma tu asistencia</h3>
+    <form id="confirmacionForm">
+        <!-- Nombre -->
+        <input type="text" placeholder="Tu nombre completo*" required>
+
+        <!-- ¿Asistirás? -->
+        <select id="asistencia" required>
+            <option value="" disabled selected>¿Asistirás?*</option>
+            <option value="si">¡Sí, asistiré!</option>
+            <option value="no">No podré asistir</option>
+        </select>
+
+        <!-- ¿Vendrás con acompañante? (solo visible si dice "Sí") -->
+        <div id="acompananteSection" style="display: none;">
+            <select id="acompanante">
+                <option value="" disabled selected>¿Vendrás con alguien más?</option>
+                <option value="solo">Vendré solo/a</option>
+                <option value="pareja">Vendré con mi pareja</option>
+                <option value="acompanante">Vendré con un acompañante</option>
+            </select>
+            <input type="text" id="nombreAcompanante" placeholder="Nombre de tu acompañante" style="display: none;">
+        </div>
+
+        <!-- Contacto -->
+        <input type="text" placeholder="Tu correo o teléfono*" required>
+
+        <!-- Comentarios -->
+        <textarea placeholder="Alergias, comentarios o mensaje (opcional)"></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+</section>
 
         <footer>
             <p>¡Gracias por acompañarnos en este día especial!</p>
