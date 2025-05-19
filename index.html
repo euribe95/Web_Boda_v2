@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boda de Elena y Eduardo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <style>
         /* Estilos globales */
@@ -32,12 +34,16 @@
         /* Header con imagen de iglesia */
         header {
             background: linear-gradient(rgba(248, 245, 242, 0.7), rgba(248, 245, 242, 0.7)), 
-                        url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Iglesia_de_San_Vicente_de_Abando_%28Bilbao%29_01.jpg/1200px-Iglesia_de_San_Vicente_de_Abando_%28Bilbao%29_01.jpg');
+                        url('https://cdn.bilbaoarquitectura.com/galerias/V3x3WPuCaSJ9.jpg');
             background-size: cover;
             background-position: center;
             text-align: center;
             padding: 80px 20px;
             color: #333;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         
         /* Sección de celebración */
@@ -61,16 +67,19 @@
             width: 100%;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            aspect-ratio: 16/9;
+            object-fit: cover;
         }
         
         /* Separador de peonías */
         .separador-peonias {
-            background-image: url('https://i.imgur.com/XtQZyYr.jpg');
+            background-image: url('https://cdn.pixabay.com/photo/2022/09/18/14/32/peony-7463153_1280.jpg');
             background-size: cover;
             background-position: center;
-            height: 150px;
+            height: 200px;
             opacity: 0.9;
             margin: 40px 0;
+            background-attachment: fixed;
         }
         
         /* Formulario */
@@ -80,6 +89,7 @@
             max-width: 800px;
             margin: 0 auto;
             border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
         .formulario iframe {
             width: 100%;
@@ -94,6 +104,7 @@
             background-color: #333;
             color: white;
             margin-top: 40px;
+            font-size: 0.9em;
         }
         
         /* Responsive */
@@ -105,7 +116,12 @@
                 min-width: 100%;
             }
             header {
-                padding: 60px 15px;
+                padding: 40px 15px;
+                min-height: 200px;
+            }
+            .separador-peonias {
+                height: 150px;
+                background-attachment: scroll;
             }
             .formulario iframe {
                 height: 1000px;
@@ -141,7 +157,7 @@
                 <p>14:00 horas</p>
             </div>
             <div class="lugar-imagen">
-                <img src="https://www.hosteleriaolagorta.com/wp-content/uploads/2022/03/OLAGORTA-1024x683.jpg" alt="Hostelería Olagorta">
+                <img src="https://www.hosteleriaolagorta.com/wp-content/uploads/2018/06/olagortagaleria-019.jpg" alt="Hostelería Olagorta" loading="lazy">
             </div>
         </section>
         
@@ -151,7 +167,7 @@
         <!-- Formulario -->
         <section class="formulario">
             <h3>Confirma tu asistencia</h3>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd1MlsYLSG3WqJLjwJ7qJBGjlWe-fJrjqttfnyZZ6qF9IUULw/viewform?embedded=true&usp=pp_url&headers=false"></iframe>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd1MlsYLSG3WqJLjwJ7qJBGjlWe-fJrjqttfnyZZ6qF9IUULw/viewform?embedded=true&usp=pp_url&headers=false" loading="lazy"></iframe>
         </section>
         
         <footer>
