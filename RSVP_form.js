@@ -2,7 +2,7 @@ document.getElementById('confirmacionForm').addEventListener('submit', function(
     e.preventDefault();
     
     // Cambia este email por el tuyo
-    const email = 'tucorreo@gmail.com';
+    const email = 'euribe95@gmail.com';
     
     // Prepara los datos
     const formData = new FormData(this);
