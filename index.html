@@ -1,66 +1,164 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-<style>
-    body {
-        margin: 0;
-        font-family: 'Montserrat', sans-serif;
-        background-color: #F8F5F2;
-        color: #333;
-    }
-    h1, h2, h3 {
-        font-family: 'Playfair Display', serif;
-    }
-</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boda de Elena y Eduardo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        /* Agregaremos CSS aquí luego */
+        /* Estilos globales */
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #F8F5F2;
+            color: #333;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+        }
+        .container {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        .contador {
+            font-size: 1.2em;
+            color: #d48a8a;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        /* Header con imagen de iglesia */
+        header {
+            background: linear-gradient(rgba(248, 245, 242, 0.7), rgba(248, 245, 242, 0.7)), 
+                        url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Iglesia_de_San_Vicente_de_Abando_%28Bilbao%29_01.jpg/1200px-Iglesia_de_San_Vicente_de_Abando_%28Bilbao%29_01.jpg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 80px 20px;
+            color: #333;
+        }
+        
+        /* Sección de celebración */
+        .lugar-celebracion {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 40px 20px;
+            background-color: #F8F5F2;
+        }
+        .lugar-texto {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+        .lugar-imagen {
+            flex: 1;
+            min-width: 300px;
+        }
+        .lugar-imagen img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        /* Separador de peonías */
+        .separador-peonias {
+            background-image: url('https://i.imgur.com/XtQZyYr.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 150px;
+            opacity: 0.9;
+            margin: 40px 0;
+        }
+        
+        /* Formulario */
+        .formulario {
+            background: white;
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 8px;
+        }
+        .formulario iframe {
+            border: none;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .lugar-celebracion {
+                flex-direction: column;
+            }
+            .lugar-texto, .lugar-imagen {
+                min-width: 100%;
+            }
+            header {
+                padding: 60px 15px;
+            }
+        }
     </style>
 </head>
-<script>
-  const fechaBoda = new Date('2025-11-29'); // Cambia por tu fecha
-  const hoy = new Date();
-  const diasRestantes = Math.ceil((fechaBoda - hoy) / (1000 * 60 * 60 * 24));
-  document.write(`<p class="contador">¡Faltan ${diasRestantes} días!</p>`);
-</script>
-<style>
-  .contador {
-    font-size: 1.2em;
-    color: #d48a8a;
-    text-align: center;
-  }
-</style>
 <body>
     <div class="container">
+        <!-- Contador de días -->
+        <script>
+            const fechaBoda = new Date('2025-11-29');
+            const hoy = new Date();
+            const diasRestantes = Math.ceil((fechaBoda - hoy) / (1000 * 60 * 60 * 24));
+            document.write(`<p class="contador">¡Faltan ${diasRestantes} días!</p>`);
+        </script>
+        
+        <!-- Header con imagen de iglesia -->
         <header>
-            <h1>¡Nos Casamos!</h1>
-            <h2>Elena & Eduardo</h2>
-            <p>Fecha: 29/11/2025</p>
-            <p>Lugar: Iglesia San Vicente</p>
+            <h1>Elena & Eduardo</h1>
+            <h2>29 · Noviembre · 2025</h2>
         </header>
-
-<section class="formulario">
-    <h3>Confirma tu asistencia</h3>
-    <!-- Iframe de Google Forms -->
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd1MlsYLSG3WqJLjwJ7qJBGjlWe-fJrjqttfnyZZ6qF9IUULw/viewform?embedded=true&usp=pp_url&headers=false" 
-            width="100%" 
-            height="1500" 
-            frameborder="0" 
-            marginheight="0" 
-            marginwidth="0">
-        Cargando…
-    </iframe>
-</section>
+        
+        <!-- Sección de celebración -->
+        <section class="lugar-celebracion">
+            <div class="lugar-texto">
+                <h2>Ceremonia</h2>
+                <p>Iglesia de San Vicente de Abando</p>
+                <p>12:00 horas</p>
+                
+                <h2 style="margin-top: 30px;">Celebración</h2>
+                <p>Hostelería Olagorta</p>
+                <p>14:00 horas</p>
+            </div>
+            <div class="lugar-imagen">
+                <img src="https://www.hosteleriaolagorta.com/wp-content/uploads/2022/03/OLAGORTA-1024x683.jpg" alt="Hostelería Olagorta">
+            </div>
+        </section>
+        
+        <!-- Separador de peonías -->
+        <div class="separador-peonias"></div>
+        
+        <!-- Formulario -->
+        <section class="formulario">
+            <h3>Confirma tu asistencia</h3>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd1MlsYLSG3WqJLjwJ7qJBGjlWe-fJrjqttfnyZZ6qF9IUULw/viewform?embedded=true&usp=pp_url&headers=false" 
+                    width="100%" 
+                    height="1500" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0">
+                Cargando…
+            </iframe>
+        </section>
+        
         <footer>
             <p>¡Gracias por acompañarnos en este día especial!</p>
         </footer>
     </div>
-
-    <script>
-        // Agregaremos JavaScript luego
-    </script>
 </body>
 </html>
